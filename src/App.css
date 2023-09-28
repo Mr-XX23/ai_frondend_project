@@ -1,0 +1,157 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+.main {
+  width: 100vw;
+  min-height: 100vh;
+  position: fixed;
+  display: flex;
+  justify-content: center;
+  padding: 120px 24px 160px 24px;
+  pointer-events: none;
+}
+
+.main:before {
+  background: radial-gradient(circle, rgb(209 109 109 / 37%) 0, #e7e7e7 100%);
+  position: absolute;
+  content: "";
+  z-index: 2;
+  width: 100%;
+  height: 100%;
+  top: 0;
+}
+
+.main:after {
+  content: "";
+  background-image: url("/src/assets/grid.svg");
+  z-index: 1;
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  top: 0;
+  opacity: 0.4;
+  filter: invert(1);
+}
+
+.gradient {
+  height: fit-content;
+  z-index: 3;
+  width: 100%;
+  max-width: 640px;
+  background-image: radial-gradient(
+      at 27% 37%,
+      hsla(215, 98%, 61%, 1) 0px,
+      transparent 0%
+    ),
+    radial-gradient(at 97% 21%, hsla(125, 98%, 72%, 1) 0px, transparent 50%),
+    radial-gradient(at 52% 99%, hsla(354, 98%, 61%, 1) 0px, transparent 50%),
+    radial-gradient(at 10% 29%, hsla(256, 96%, 67%, 1) 0px, transparent 50%),
+    radial-gradient(at 97% 96%, hsla(38, 60%, 74%, 1) 0px, transparent 50%),
+    radial-gradient(at 33% 50%, hsla(222, 67%, 73%, 1) 0px, transparent 50%),
+    radial-gradient(at 79% 53%, hsla(343, 68%, 79%, 1) 0px, transparent 50%);
+  position: absolute;
+  content: "";
+  width: 100%;
+  height: 100%;
+  filter: blur(100px) saturate(150%);
+  top: 80px;
+  opacity: 0.15;
+}
+
+.button_text > span {
+  padding: 0;
+  margin: 0;
+  border-radius: 0;
+  font-size: 1rem;
+  display: block;
+}
+
+.login_btn > span {
+  color: #ffff;
+  background: #000;
+  padding: 12px;
+  border: 1px solid #000;
+  border-radius: 99999px;
+}
+
+.login_btn > span:hover {
+  color: #000;
+  background: #fff;
+}
+
+@media screen and (max-width: 640px) {
+  .main {
+    padding: 0;
+  }
+}
+
+/* Tailwind Styles */
+
+.Ai_head_app {
+  @apply relative z-10 flex justify-center items-center flex-col max-w-7xl mx-auto sm:px-16 px-6;
+}
+
+.app {
+  @apply relative z-10 items-center mx-auto sm:px-16 px-6;
+}
+
+.black_btn {
+  @apply rounded-full border border-black bg-black md:py-2 md:px-4 md:text-sm text-white transition-all hover:bg-white hover:text-black hover:font-bold;
+}
+
+.black_btn_sec {
+  @apply rounded-full border border-black bg-white md:py-2 md:px-4 md:text-sm text-black transition-all hover:bg-black hover:text-white hover:font-bold;
+}
+
+.black_btn_2 {
+  @apply w-[100] rounded-full border border-black bg-black py-2 text-sm text-white transition-all hover:bg-white hover:text-black hover:font-bold;
+}
+
+.head_text {
+  @apply mt-5 text-3xl font-extrabold leading-[1.15] text-black sm:text-6xl text-center;
+}
+
+.misx_gradient {
+  @apply bg-gradient-to-r from-blue-600 via-red-500 to-yellow-500 bg-clip-text text-transparent;
+}
+
+.desc {
+  @apply mt-5 text-base text-gray-600 sm:text-xl text-center;
+}
+
+.desc_body {
+  @apply mt-5 text-base text-gray-600 sm:text-xl;
+}
+
+.desc_body_paragraph {
+  @apply mt-5 text-base text-gray-600;
+}
+
+.url_input {
+  @apply block w-full rounded-md border border-gray-200 bg-white py-2.5 pl-10 pr-12 text-sm shadow-lg font-satoshi font-medium focus:border-black focus:outline-none focus:ring-0;
+}
+
+.submit_btn {
+  @apply hover:border-gray-700 hover:text-gray-700 absolute inset-y-0 right-0 my-1.5 mr-1.5 flex w-10 items-center justify-center rounded border border-gray-200 font-sans text-sm font-medium text-gray-400;
+}
+
+.link_card {
+  @apply p-3 flex justify-start items-center flex-row bg-white border border-gray-200 gap-3 rounded-lg cursor-pointer;
+}
+
+.copy_btn {
+  @apply w-7 h-7 rounded-full bg-white/10 shadow-[inset_10px_-50px_94px_0_rgb(199,199,199,0.2)] backdrop-blur flex justify-center items-center cursor-pointer;
+}
+
+.blue_gradient {
+  @apply font-black bg-gradient-to-r from-blue-600 to-cyan-600 bg-clip-text text-transparent;
+}
+
+.summary_box {
+  @apply rounded-xl border border-gray-200 bg-white/20 shadow-[inset_10px_-50px_94px_0_rgb(199,199,199,0.2)] backdrop-blur p-4;
+}
+
+.body_head_text {
+  @apply mt-2 text-3xl font-bold tracking-tight text-gray-900 sm:text-[3.5rem] leading-[1.15];
+}
